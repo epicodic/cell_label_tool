@@ -1,0 +1,21 @@
+[project]
+name = "cell-label-tool"
+version = "0.1.0"
+description = "Python tool for manually labeling elliptical cells with the following features"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["matplotlib>=3.10.8", "pyqt5>=5.15.11", "scikit-image>=0.26.0"]
+
+[dependency-groups]
+dev = ["ruff>=0.14.11", "ty>=0.0.23"]
+
+[project.scripts]
+cell_label_tool = "cell_label_tool.main:main"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+namespace = true
+module-root = "src"
